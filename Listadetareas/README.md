@@ -1,16 +1,9 @@
-# React + Vite
+la verdad hice un codigo sencillo y rapido maestro donde practicamente uintente poner todo lo quepidio yfacil mas que nada en la explicacion 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Components: por ejemplo mis componentes intente que sea de un uso y tenga comentarios para que vea que parte funciona o que cosa va mostar componentes cortos mas que nada de una sola funcion asi como dijo ustes que hagamos
 
-Currently, two official plugins are available:
+en context : mas que nada prode aqui  es para evitar el codigo de espagueti y no este todo amontonado y evito mas que nada lo de hijo a hijo y aparte es lo del fondopor ejemmplo que cada componente ponga lo del tema oscuro y claro pos  ahi es donde entra esta carpeta y no crear 10 componentes con ese tema 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+hooks pos mas que aqui profe como ya sabemos es la logica de como funciona o para que funcione
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Pages aqui mas que nada aqui se junta todos los componentes   o las piezas pequeñas como los botones  las listas todo eso es muy simple aqui deberia si hay mas de una pestaña aqui seria poner los URL
