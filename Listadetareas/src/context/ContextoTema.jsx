@@ -1,10 +1,10 @@
 import { createContext, useState } from 'react'
 
-// profe aqui yo cree el contexto para no andar pasando props por todos los lados adios prop drilling
+// profe aqui yo cree el contexto para no andar pasando props por todos los lados para que no este el  prop drilling
 export const ContextoTema = createContext()
 
 export const ProveedorTema = ({ children }) => {
-  // aqui yo guardo el estado actual si es claro u oscuro
+  // aqui yo guardo el estado actual si es claro o oscuro
   const [tema, setTema] = useState('claro')
 
   const alternarTema = () => {
