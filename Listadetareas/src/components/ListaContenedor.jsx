@@ -1,15 +1,14 @@
 import { useState } from 'react'
-import { usarGuardado } from '../hooks/usarGuardado'
+
+import { useGuardado } from '../hooks/usarGuardado'
 import { ListaVista } from './ListaVista'
 
-// profe aqui yo separe la logica este es el contenedor que hace el trabajo sucio
 export function ListaContenedor() {
-  
-  // pos aqui pongo para poner el componente reutilizable que hice hace rato para guardar los datos
-  const [tareas, setTareas] = usarGuardado('mis_tareas', [])
+  // Aqui se pide el gancho 
+  // Esto es para separar la logica de lo que se ve en pantalla
+  const [tareas, setTareas] = useGuardado('mis_tareas', [])
   const [nuevaTarea, setNuevaTarea] = useState('')
 
-  // esto es para que no me agreguen cosas vacias y le pongo un id
   const alAgregar = () => {
     if (!nuevaTarea.trim()) return
     setTareas([...tareas, { id: Date.now(), texto: nuevaTarea }])
@@ -21,7 +20,6 @@ export function ListaContenedor() {
   }
 
   return (
-    // y aqui ya nada mas pasa la vista  para funcione 
     <ListaVista
       tareas={tareas}
       nuevaTarea={nuevaTarea}

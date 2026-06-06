@@ -1,30 +1,31 @@
 import { Boton } from './Boton'
 
-// pos aqui arme la vista pura interfaz nada de logica pesada
-// esto nomas recibe las props y dibuja lo que le manden
+// Pos aqui maestro use aqui esta vista que solo se encarga de dibujar
+// Esto funciona para que la logica se quede en el contenedor
 export function ListaVista({ tareas, nuevaTarea, setNuevaTarea, alAgregar, alBorrar }) {
   return (
-    <div className="p-6 max-w-md mx-auto">
-      <h2 className="text-2xl font-bold mb-4">Mis Tareas</h2>
-      <div className="flex gap-2 mb-4">
-        
-        {/* aqui el input recibe el valor y avisa cuando cambia */}
+    <div className="max-w-md mx-auto mt-6">
+      <h2 className="text-lg font-bold mb-4">Tarreas pendientes</h2>
+      
+      <div className="flex gap-2 mb-6">
         <input
           type="text"
-          className="border p-2 rounded text-black flex-1"
+          placeholder="AGREGAR TAREA"
+          className="border flex-1 px-2 py-1 rounded text-sm uppercase"
           value={nuevaTarea}
           onChange={(e) => setNuevaTarea(e.target.value)}
-          placeholder="Escribe algo..."
         />
-        <Boton onClick={alAgregar} variante="primario">Añadir</Boton>
+        {/* Esto es asi para usar tu boton reciclado en lugar del normal */}
+        <Boton funcionClick={alAgregar} estilos="bg-blue-500 hover:bg-blue-600" texto="Añadir" />
       </div>
-      <ul className="space-y-2">
+
+      <ul>
         {tareas.map((t) => (
-          <li key={t.id} className="flex justify-between items-center border-b pb-1">
-            <span>{t.texto}</span>
-            
-            {/* aqui reciclo el boton pero en rojo para eliminar */}
-            <Boton onClick={() => alBorrar(t.id)} variante="peligro">X</Boton>
+          <li key={t.id} className="flex justify-between items-center border-b py-2">
+            <span className="text-sm text-gray-700">{t.texto}</span>
+            <button onClick={() => alBorrar(t.id)} className="text-red-500 text-xs hover:underline">
+              borrar
+            </button>
           </li>
         ))}
       </ul>
